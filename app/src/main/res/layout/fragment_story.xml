@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.login.LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/ivOpenMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_baseline_pin_drop_24"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProfile"
+            app:layout_constraintEnd_toStartOf="@+id/ivProfile"
+            app:layout_constraintTop_toTopOf="@+id/ivProfile" />
+
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvStory"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/story"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStory"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStory"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_baseline_add_24"
+            android:backgroundTint="@color/black"
+            app:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <include
+            android:id="@+id/shimLayout"
+            layout="@layout/shimmer_story"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStory" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/rv_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="iv_placeholder, tv_empty"/>
+
+        <ImageView
+            android:id="@+id/iv_placeholder"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_empty_story"
+            app:layout_constraintEnd_toEndOf="@+id/rvStory"
+            app:layout_constraintStart_toStartOf="@+id/rvStory"
+            app:layout_constraintTop_toTopOf="@+id/rvStory"
+            app:layout_constraintBottom_toBottomOf="@id/rvStory"/>
+
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_placeholder"
+            app:layout_constraintStart_toStartOf="@+id/iv_placeholder"
+            app:layout_constraintTop_toBottomOf="@+id/iv_placeholder" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

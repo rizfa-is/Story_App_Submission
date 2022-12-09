@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_onboarding"
+    app:startDestination="@id/storyFragment">
+
+    <fragment
+        android:id="@+id/storyFragment"
+        android:name="com.istekno.app.storyappsubmission.features.story.StoryFragment"
+        android:label="fragment_story"
+        tools:layout="@layout/fragment_story">
+
+        <action
+            android:id="@+id/action_storyFragment_to_detailStoryFragment"
+            app:destination="@+id/detailStoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_storyFragment_to_addStoryFragment"
+            app:destination="@+id/addStoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_storyFragment_to_profileFragment"
+            app:destination="@+id/profileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailStoryFragment"
+        android:name="com.istekno.app.storyappsubmission.features.story.detail.DetailStoryActivity"
+        android:label="fragment_detail_story"
+        tools:layout="@layout/activity_detail_story"/>
+
+    <fragment
+        android:id="@+id/addStoryFragment"
+        android:name="com.istekno.app.storyappsubmission.features.story.add.AddStoryFragment"
+        android:label="fragment_add_story"
+        tools:layout="@layout/fragment_add_story">
+
+        <action
+            android:id="@+id/action_addStoryFragment_to_storyFragment"
+            app:destination="@+id/storyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.istekno.app.storyappsubmission.features.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile"/>
+</navigation>

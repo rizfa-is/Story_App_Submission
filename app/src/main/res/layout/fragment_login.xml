@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.login.LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingHorizontal="24dp" >
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="65dp"
+            android:text="@string/login"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/email"
+            android:textColor="@color/purple_500"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
+
+        <com.istekno.app.core.view.StEditTextEmail
+            android:id="@+id/etEmail"
+            style="@style/myEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/tvEmail"
+            app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+
+        <TextView
+            android:id="@+id/tvPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/password"
+            android:textColor="@color/purple_500"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+        <com.istekno.app.core.view.StEditTextPassword
+            android:id="@+id/etPassword"
+            style="@style/myEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/tvPassword"
+            app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/login"
+            android:textColor="@color/selector_button_text"
+            android:background="@drawable/selector_button"
+            android:enabled="false"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword"/>
+
+        <TextView
+            android:id="@+id/tv_dont_have_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="90dp"
+            android:text="@string/dont_have_account"
+            android:textColor="@android:color/background_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+        <TextView
+            android:id="@+id/tv_register_here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:text="@string/register_here"
+            android:textColor="@color/purple_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_dont_have_account" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

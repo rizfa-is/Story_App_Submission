@@ -1,0 +1,7 @@
+<resources>
+    <string name="success_get_location">Success get last location.</string>
+    <string name="fail_get_location">Failed get last location.</string>
+    <string name="add_last_location">Add Last Location</string>
+    <string name="title_maps">Maps</string>
+    <string name="title_favorite">Favorite</string>
+</resources>

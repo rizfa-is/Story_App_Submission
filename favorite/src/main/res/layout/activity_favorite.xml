@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        tools:context=".presentation.FavoriteActivity">
+
+        <TextView
+            android:id="@+id/tvFavorite"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/favorite"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFavorite"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFavorite"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <include
+            android:id="@+id/shimLayout"
+            layout="@layout/shimmer_story"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFavorite" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/rv_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="iv_placeholder, tv_empty"/>
+
+        <ImageView
+            android:id="@+id/iv_placeholder"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_empty_story"
+            app:layout_constraintEnd_toEndOf="@+id/rvFavorite"
+            app:layout_constraintStart_toStartOf="@+id/rvFavorite"
+            app:layout_constraintTop_toTopOf="@+id/rvFavorite"
+            app:layout_constraintBottom_toBottomOf="@id/rvFavorite"/>
+
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_placeholder"
+            app:layout_constraintStart_toStartOf="@+id/iv_placeholder"
+            app:layout_constraintTop_toBottomOf="@+id/iv_placeholder" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

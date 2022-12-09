@@ -1,0 +1,73 @@
+Skenario Testing Story App
+
+Unit Testing
+1. AuthViewModelTest
+	a. register success - Resource Success
+		- Membuat reflection class api service
+   		- Memastikan data success ketika dipanggil
+    	- Memanggil method userRegister untuk mendapatkan data asli
+    	- Memastikan data tidak null
+   		- Memastikan kesamaan data response antara data dummy dengan yang asli
+
+	b. register failed - Resource Error
+		- Membuat reflection class api service
+   		- Memastikan data error ketika dipanggil
+    	- Memanggil method userRegister untuk mendapatkan data asli
+    	- Memastikan data null
+   		- Memastikan kesamaan data response antara data dummy dengan yang asli
+
+	c. login success - Resource Success
+		- Membuat reflection class api service
+   		- Memastikan data success ketika dipanggil
+    	- Memanggil method userLogin untuk mendapatkan data asli
+    	- Memastikan data tidak null
+   		- Memastikan kesamaan data response antara data dummy dengan yang asli
+
+	d. login failed - Resource Error
+		- Membuat reflection class api service
+   		- Memastikan data error ketika dipanggil
+    	- Memanggil method userLogin untuk mendapatkan data asli
+    	- Memastikan data null
+   		- Memastikan kesamaan data response antara data dummy dengan yang asli
+
+2. GetStoriesViewModelTest
+	a. get all stories success
+    	- Memastikan method getAllStory bisa dipanggil
+    	- Memastikan data tidak null
+   		- Memastikan kesamaan data response antara data dummy dengan yang asli
+
+3. StoryViewModelTest
+	a. get stories by location success - Resource Success
+		- Membuat reflection class api service
+   		- Memastikan data success ketika dipanggil
+    	- Memanggil method getAllStory by location untuk mendapatkan data asli
+    	- Memastikan data tidak null
+   		- Memastikan kesamaan data response antara data dummy dengan yang asli
+
+	b. get stories by location empty - Resource Empty
+		- Membuat reflection class api service
+   		- Memastikan data empty ketika dipanggil
+    	- Memanggil method getAllStory by location untuk mendapatkan data asli
+    	- Memastikan data kosong
+   		- Memastikan kesamaan data response antara data dummy dengan yang asli
+
+	c. get stories by location failed - Resource Error
+		- Membuat reflection class api service
+   		- Memastikan data error ketika dipanggil
+    	- Memanggil method getAllStory by location untuk mendapatkan data asli
+    	- Memastikan data null
+   		- Memastikan kesamaan data response antara data dummy dengan yang asli
+
+	d. add story success - Resource Success
+		- Membuat reflection class api service
+   		- Memastikan data success ketika dipanggil
+    	- Memanggil method addStory untuk mendapatkan data asli
+    	- Memastikan data tidak null
+   		- Memastikan kesamaan data response antara data dummy dengan yang asli
+
+	e. add story failed - Resource Error
+		- Membuat reflection class api service
+   		- Memastikan data error ketika dipanggil
+    	- Memanggil method addStory untuk mendapatkan data asli
+    	- Memastikan data null
+   		- Memastikan kesamaan data response antara data dummy dengan yang asli
